@@ -1,14 +1,16 @@
 body{
     margin:0;
 }
-ul li {
-    padding:0;
+ul, li {
+    list-style: none;
+    padding:0 0;
 }
 #container {
   margin: 0px auto;
 }
 .nav{
     background-color: white;
+    position: fixed;
     display: inline-block;
     width: 100%;
     height: 101;
@@ -109,6 +111,7 @@ p {
 /* layer carousel */
 #layer-carousel{
     background: grey;
+    margin-top: 101;
 }
 #layer-carousel img{
     width: 100%;
@@ -190,6 +193,79 @@ p {
 .col-1{width:8.333%;}
 .row{width:100%; display: flex;}
 
+/* often-menu > icon - font-awesome*/
+#often-menu i{
+    font-size: 45px;
+    color:gray;
+}
+#often-menu a{
+    text-align: center;
+    padding:12;
+    text-decoration: none;
+}
+#often-menu{
+    margin:33 0;
+}
+.often-menu-gird{
+    display: inline-grid;
+    background-color: #ecf0f2;
+}
+.often-menu-gird:hover{
+    background:#a4b7c1;
+}
+/* pView (meal, notice, news)*/
+#pView{
+    margin: 15 0;
+}
+#pView ul{
+    margin: 8 0;
+}
+.pView-title-head{
+    border-bottom: 2px solid #8575ff;
+}
+.pView-grid{
+    display: inline;
+    padding: 0 10;
+}
+.pView-title{
+    margin-bottom: 5;
+    border-bottom:1px solid #ddd;
+}
+.pView-table table{
+    width: 100%;
+}
+.pView-table tr{
+    margin-bottom: 12;
+}
+.pView-table a{
+    text-decoration: none;
+    font-size:13;
+    color: #666666;
+}
+.pView-table a:hover{
+    color: #00aaff;
+}
+.pView-news-thumbnail img{
+    width: 100px;
+}
+.pView-news-thumbnail{
+    padding:0;
+}
+.date{
+    float:right;
+    font-size: 11;
+    color: grey;
+}
+.more{
+    float: right;
+    font-size: 11;
+    margin-top: 3;
+    text-decoration: none;
+    color: grey;
+}
+.more:hover{
+    color:#00aaff;
+}
 @keyframes slide{
     0%{opacity:1; left:0;}
     33.33%{opacity:0.5; left:-120%;}
@@ -270,5 +346,36 @@ p {
     .p-content{
         white-space: pre-line;
         padding:0 30;
+    }
+    .row{
+        display: block;
+    }
+    #pView {
+        margin: 0 30;
+    }
+    /* col-mobile */
+    .col-mb-12{width:100%;}
+    .col-mb-11{width:91.666%;}
+    .col-mb-10{width:83.333%;}
+    .col-mb-9{width:75%;}
+    .col-mb-8{width:66.666%;}
+    .col-mb-7{width:58.333%;}
+    .col-mb-6{width:50%;}
+    .col-mb-5{width:41.666%;}
+    .col-mb-4{width:33.333%;}
+    .col-mb-3{width:25%;}
+    .col-mb-2{width:16.666%;}
+    .col-mb-1{width:8.333%;}
+
+    /* often-menu */
+    #often-menu a{
+        border:0.5px solid gray;
+    }
+    .often-menu-banner{
+        display: none!important;
+    }
+    .often-menu-col{
+        display: inline-table;
+        width:100%;
     }
 }
