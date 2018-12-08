@@ -1,12 +1,44 @@
+/* gothic-a1-regular - korean */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body{
     margin:0;
+    font-family: "Nanum Gothic", sans-serif;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
 }
 ul, li {
     list-style: none;
     padding:0 0;
 }
+#header {
+    margin-bottom: 20px;
+    position: relative;
+    left:0;
+    right:0;
+    margin:0px auto;
+    width:100%;
+    z-index: 999;
+    font-weight: bold;
+  }
 #container {
   margin: 0px auto;
+}
+#footer {
+    clear: both;
+    background: #eaeaea;
+    padding: 20px;
+}
+.footer-cont h3{
+    color:#474d56;
+}
+.footer-cont small{
+    color:grey;
+}
+.footer-cont p{
+    font-size: 13;
+    padding-top: 2;
 }
 .nav{
     background-color: white;
@@ -54,24 +86,12 @@ ul, li {
     display: inline-block;
     padding: 22 30;
 }
-/* .nav-item:hover{
-    background-color: black;
-} */
-
-#header {
-  margin-bottom: 20px;
-  position: relative;
-  left:0;
-  right:0;
-  margin:0px auto;
-  width:100%;
-  z-index: 999;
+.item-container a{
+    color:#474d56;
 }
-
-/* section */
-/* #section1{
-    margin-top:120px;
-} */
+.item-container a:hover{
+    color:#00aaff;
+}
 #section1 img{
     width:100%;
     max-width:500;
@@ -94,12 +114,8 @@ ul, li {
     bottom: -15;
     height: 2.5;
 }
-
-#footer {
-  padding: 20px;
-  border: 1px solid #bcbcbc;
-}
 p {
+  margin:0;
   word-break:normal;
   word-wrap:break-word;
 }
@@ -167,9 +183,9 @@ p {
     width: 121;
     padding: 11 0 11 35;
 }
-.nav-dropDown-menu li:hover{
+/* .nav-dropDown-menu li:hover{
     background: #00aaff
-}
+} */
 .nav-dropDown-menu ul{
     padding:0;
     margin:0;    
@@ -200,11 +216,16 @@ p {
 }
 #often-menu a{
     text-align: center;
-    padding:12;
+    padding:12 0;
     text-decoration: none;
+    color:grey;
+    font-size:12;
 }
 #often-menu{
     margin:33 0;
+}
+.often-menu-btn{
+    margin:0 auto;
 }
 .often-menu-gird{
     display: inline-grid;
@@ -212,6 +233,9 @@ p {
 }
 .often-menu-gird:hover{
     background:#a4b7c1;
+}
+.often-menu-name{
+    margin-top:4px;
 }
 /* pView (meal, notice, news)*/
 #pView{
@@ -233,6 +257,7 @@ p {
 }
 .pView-table table{
     width: 100%;
+    margin-top:10;
 }
 .pView-table tr{
     margin-bottom: 12;
@@ -250,6 +275,28 @@ p {
 }
 .pView-news-thumbnail{
     padding:0;
+}
+.pView-news-word{
+    padding-left: 8;
+}
+.pView-news-sub{
+    font-size:13px;
+    font-weight: bold;
+    color: #2e2e1f;
+}
+.pView-news-cont{
+    font-size:11px;
+    margin-top: 4px;
+    color: #666666;
+}
+.pView-news-href{
+    text-decoration: none;
+}
+.pView-news-sub:hover{
+    color:#00aaff;
+}
+.pView-news-grid{
+    display: flex;
 }
 .date{
     float:right;
@@ -280,9 +327,6 @@ p {
     .section {
         float: left;
     }
-    #footer {
-        clear: both;
-    }
 }
 
 @media ( max-width: 481px ){
@@ -311,6 +355,7 @@ p {
         /*animation: 2s slide-in ease-in ;*/
         /*animation-fill-mode: both;*/
     }
+    
     /*@keyframes slide-out {*/
         /*from{*/
             /*width:150px;*/
@@ -370,6 +415,7 @@ p {
     /* often-menu */
     #often-menu a{
         border:0.5px solid gray;
+        width: 100%;
     }
     .often-menu-banner{
         display: none!important;
