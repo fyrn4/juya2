@@ -1,4 +1,4 @@
-/* gothic-a1-regular - korean */
+/* gothic-a1-regular - korean1 */
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body{
     margin:0;
@@ -462,7 +462,7 @@ p {
         display: none;
     }
     .mb-menu ul li:hover > ul {
-        display: block;
+        display: block;d
     }
     .mb-menu ul{
         
