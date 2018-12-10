@@ -441,7 +441,8 @@ p {
         display: inline-table;
         width:100%;
     }
-    #slide{height:max-content!important;} /* 모바일시 height값 먼저 변경하자 ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ*/
+    #slide{height:150!important;} /* 모바일시 height값 먼저 변경하자 ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ*/
+    
 }
 #slide{height:396px;position:relative;overflow:hidden;}
 #slide ul{margin-top:0;width:400%;height:100%;transition:1s;}
