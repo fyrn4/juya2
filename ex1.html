@@ -16,13 +16,13 @@
                                 <div class="nav-index"><a href="">금빛주야보호센터2</a></div>
                                 <div class="nav-container">
                                         <!-- <span class="nav-btn"><a id="nav-btn" href="#" onclick="navbtn(event);">button<i class="fas fa-bars"></i></a></span> -->
-                                        <span class="nav-btn"><a id="nav-btn" href="#" onclick="mb_btn(event);">button<i class="fas fa-bars"></i></a></span>
+                                        <span class="nav-btn"><a id="nav-btn" href="#" onclick="mb_btn(event);"><i class="fas fa-bars"></i></a></span>
                                         <ul class="item-container">
                                                 <li class="nav-item"><a href="#" onclick="move('1')">센터소개</a></li>
                                                 <li class="nav-item"><a href="#" onclick="move('2')">입소정보</a></li>
                                                 <li class="nav-item"><a href="#" onclick="move('3')">프로그램</a></li>
                                                 <li class="nav-item"><a href="#" onclick="move('4')">커뮤니티</a></li>
-                                                <li class="nav-item"><a href="#" onclick="move('5')">sign <i class="fas fa-sign-in-alt"></i></a></li>
+                                                <li class="nav-item"><a href="#" id="myBtn">sign <i class="fas fa-sign-in-alt"></i></a></li>
                                                 <div class="nav-dropWrap">
                                                         <ul class="nav-dropDown-menu">
                                                                 <li id="sub01">
@@ -61,6 +61,17 @@
                                         </ul>
                                 </div>
                         </div>
+                            <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                        
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                <span class="close">&times;</span>                                                               
+                                <p>로그인</p>
+                                ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                </div>
+                        
+                        </div>
                         <div class="mb-menu">
                                 <div><img width="100%" height="100" alt="로고"></div>
                                 <div class="mb-login">
@@ -68,10 +79,11 @@
                                         <input type="password" placeholder="비밀번호"/>
                                         <!-- <div class="mb-login-rem"><input type="radio">기억하기</div> -->
                                         <div class="mb-login-forget"><a href="#">ID/PW 찾기</a></div>
-                                        <button>로그인</button>
-                                        <button>회원가입</button>
+                                        <button style="background:#3ca3da">로그인</button>
+                                        <button onclick="window.location.href='#'">회원가입</button>
                                 </div>
-                                <!-- <ul>
+                        <div class="mb-menu-dropDown">
+                                <ul>
                                         <li><a href="#">menu1</a>
                                                 <ul>
                                                         <li><a href="#">menu1-1</a></li>
@@ -104,8 +116,9 @@
                                                         <li><a href="#">menu4-4</a></li>        
                                                 </ul>
                                         </li>
-                                </ul> -->
-                                <ul class="acc-menu" id="accordionMenu1">
+                                </ul>
+                        </div>
+                                <!-- <ul class="acc-menu" id="accordionMenu1">
                                         <li data-extension="close">
                                                 <div class="main-title"><span class="folder"> </span><a>menu1</a></div>
                                                 <ul class="sub">
@@ -133,7 +146,7 @@
                                         <li>
                                                 <div class="main-title"><span class="folder"> </span><a>menu4</a></div>
                                         </li>
-                                </ul>
+                                </ul> -->
                         </div>      
                 </nav>
         </div>

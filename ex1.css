@@ -90,7 +90,7 @@ a{
 }
 .nav-container >ul>li{
     display: inline-block;
-    padding: 22 30;
+    padding: 23 20;
 }
 .item-container a{
     color:#474d56;
@@ -98,6 +98,42 @@ a{
 .item-container a:hover{
     color:#00aaff;
 }
+/* 모달 로그인 */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */                          
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #section1 img{
     width:100%;
     max-width:500;
@@ -148,16 +184,21 @@ p {
 .item-container:hover > .nav-dropWrap{
     display: block;
     background:white;
-    height: 172;
+    height: 125 ;
     position: relative;
     transition: all 1s;
 }
 .nav-dropWrap{
     display: none;
-    transition: all 0.5s;
-    border-right: 1px solid;
-    border-left: 1px solid;
-    border-bottom: 1px solid;
+    height: 0;
+    border-right: 1px solid lightsteelblue;
+    border-left: 1px solid lightsteelblue;
+    border-bottom: 1px solid lightsteelblue;
+    border-top:2px solid #00aaff;
+}
+.nav-dropWrap a{
+    font-size: 14.5;
+    font-weight: 15;
 }
 .nav-dropDown-menu{
     z-index: 999;
@@ -166,18 +207,11 @@ p {
     margin: 0 auto;
     padding: 0;
 }
-.nav-dropDown-menu li{
-    transition: all 0.5s;
-    list-style: none;
-}
 .nav-dropDown-menu li > ul > li{
-    width: 121;
-    transition: all 0.5s;
-    padding: 11 0 11 35;
+    min-width: 90;
+    padding: 8 8.5 5 30;
 }
-/* .nav-dropDown-menu li:hover{
-    background: #00aaff
-} */
+
 .nav-dropDown-menu ul{
     padding:0;
     margin:0;    
@@ -214,6 +248,9 @@ p {
     color:lightcoral;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg); /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Safari */
+    transform: rotateY(180deg); /* Standard syntax */
 }
 #often-menu a{
     text-align: center;
@@ -367,9 +404,13 @@ p {
     }
     .nav-btn{
         display: inline-block;
-        padding:10px;
         float: right;
-        margin-top:9.8px;
+        font-size: 25;
+        margin-right: 25;
+        margin-top: 35;
+    }
+    #nav-btn{
+        color:#2d3545;
     }
     .item-container.nav-active {
         width: 150px;
@@ -394,11 +435,6 @@ p {
             /*width: 150px;*/
         /*}*/
     /*}*/
-    .nav-container >ul>li{
-        display: block;
-        padding: 10px;
-        margin-right: 10px;
-    }
     /* #header {
         margin-bottom:20px;
         position: fixed;
@@ -415,6 +451,9 @@ p {
     }
     .row{
         display: block;
+    }
+    #layer-carousel img{
+        height: 150;
     }
     #pView {
         margin: 0 30;
@@ -448,12 +487,12 @@ p {
         display: inline-table;
         width:100%;
     }
-    #slide{height:150!important;} /* 모바일시 height값 먼저 변경하자 ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ*/
+    #slide{height:150!important;} /* 모바일시 height값 변경하자*/
     .mb-menu{
         width: 0;
         height:1000;
         left: -100;
-        background: grey;
+        background: #3c475d;
         display: block !important;
         position: absolute;
         transition: all 0.5s;
@@ -464,31 +503,11 @@ p {
         width: 80%;
         left: 0;
     }
-    #accordionMenu1 {} .acc-menu { position:relative; list-style: none; border:4px solid #eee; } .acc-menu >li { overflow:hidden; border:1px solid #000; cursor:pointer; } .acc-menu li .main-title { background-color:#fff; padding:10px; vertical-align:middle; position:relative; z-index:100; } .acc-menu li .main-title a { display: inline-block; height:20px; line-height:20px; text-align: center; vertical-align:middle; } 
-    .acc-menu li .main-title .folder { 
-        display: inline-block; width:20px; height:20px; overflow:hidden; line-height:20px; text-align: center; 
-        vertical-align:middle; margin-right:5px; text-indent: -100px; 
-        background-image:url("https://t1.daumcdn.net/cfile/tistory/24185E335762538E2A");
-        background-position : 0 -40px; } 
-        .acc-menu li .main-title .folder.empty { background-position : 0 0; } .acc-menu li .main-title .folder.open { background-position : 0 -20px; } .acc-menu li .main-title .folder.close { background-position : 0 -40px; } .acc-menu li ul.sub { list-style: none; margin-left:30px; margin-bottom:20px; z-index:90; position:relative; } .acc-menu li ul.sub.open { display:block; } .acc-menu li ul.sub.hide { display:none; } .acc-menu li ul.sub li { height:20px; padding:10px; line-height:20px; vertical-align:middle; cursor:pointer; } .acc-menu li ul.sub li.select { background-color: #bddeea; }
-    /* .mb-menu ul li ul {
-        display: none;
-    }
-    .mb-menu ul li:hover > ul {
-        display: block;d
-    }
-    .mb-menu ul{
-        
-    }
-    .mb-menu li{
-        margin:10;
-    } */
     .mb-login{
+        background: #2d3545;
         text-align: center;
         margin: 0 auto;
         padding: 10 15%;
-        border-bottom: 1px solid;
-        border-top: 1px solid;
     }
     .mb-login input{
         margin: 3 0;
@@ -509,8 +528,27 @@ p {
         height: 35;
         width:45%;
         border: 1px;
-        background: lightblue;
+        background: #44607b;
         cursor: pointer;
+        font-size: 12;
+        color: white;
+        font-weight: bold;
+    }
+    .mb-menu-dropDown a{
+        color:white;
+        font-size: 18;
+    }
+    .mb-menu ul li ul {
+        display: none;
+    }
+    .mb-menu ul li:hover > ul {
+        display: block;
+    }
+    .mb-menu ul{
+        margin:0;
+    }
+    .mb-menu li{
+        margin:10;
     }
 }
 input{
