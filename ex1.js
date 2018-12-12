@@ -24,6 +24,17 @@ function mb_btn(e) {
         $(".mb-menu").removeClass("menu-active");
     }
 }
+$(document).ready(function(){
+    for(var i=1; i<5; i++){
+        // $('#pos'+i).attr('checked');
+        setInterval(function(){
+        console.log(i);
+        },5000);
+    }
+});
+
+        
+    
 // $(document).ready(function(){
 //     $('.item-container').mouseover(function(){
 //         $('.nav-dropWrap').css("display","block");

@@ -207,6 +207,13 @@ p {
 #often-menu i{
     font-size: 45px;
     color:gray;
+    transition: 1s all;
+}
+#often-menu i:hover{
+    font-size: 45px;
+    color:lightcoral;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 #often-menu a{
     text-align: center;
