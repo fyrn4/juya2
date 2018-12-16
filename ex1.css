@@ -1,23 +1,11 @@
-/* gothic-a1-regular - korean1 */
+/* gothic-a1-regular - korean */
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-body{
-    margin:0;
-    font-family: "Nanum Gothic", sans-serif;
-}
-h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
-}
-ul, li {
-    list-style: none;
-    padding:0 0;
-}
-a{
-    transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-}
+body{margin:0;font-family: "Nanum Gothic", sans-serif;}
+h1, h2, h3, h4 {margin: 0;padding: 0;}
+ul, li {list-style: none;padding:0 0;}
+a{transition: all .3s linear;-moz-transition: all .3s linear;-webkit-transition: all .3s linear;}
 
+/* 헤더 ~ 네비게이션 레이아웃 */
 #header {
     margin-bottom: 20px;
     position: relative;
@@ -27,10 +15,31 @@ a{
     width:100%;
     z-index: 999;
     font-weight: bold;
-  }
-#container {
-  margin: 0px auto;
 }
+#container {
+    margin: 0px auto;
+}
+#page-content{
+    margin-top: 101; 
+    min-height: 800px;   
+}
+/* col-1~12*/
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+.col-7,.col-8,.col-9,.col-10,.col-11, .col-12 {display: flex;}
+.col-12{width:100%;}
+.col-11{width:91.666%;}
+.col-10{width:83.333%;}
+.col-9{width:75%;}
+.col-8{width:66.666%;}
+.col-7{width:58.333%;}
+.col-6{width:50%;}
+.col-5{width:41.666%;}
+.col-4{width:33.333%;}
+.col-3{width:25%;}
+.col-2{width:16.666%;}
+.col-1{width:8.333%;}
+.row{width:100%; display: flex;}
+
 #footer {
     clear: both;
     background: #eaeaea;
@@ -169,7 +178,6 @@ p {
 /* layer carousel */
 #layer-carousel{
     background: grey;
-    margin-top: 101;
 }
 #layer-carousel img{
     width: 100%;
@@ -219,33 +227,17 @@ p {
     float: left;
     transition: all 0.5s;
 }
-
-/* col-1~12*/
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
-.col-7,.col-8,.col-9,.col-10,.col-11, .col-12 {display: flex;}
-.col-12{width:100%;}
-.col-11{width:91.666%;}
-.col-10{width:83.333%;}
-.col-9{width:75%;}
-.col-8{width:66.666%;}
-.col-7{width:58.333%;}
-.col-6{width:50%;}
-.col-5{width:41.666%;}
-.col-4{width:33.333%;}
-.col-3{width:25%;}
-.col-2{width:16.666%;}
-.col-1{width:8.333%;}
-.row{width:100%; display: flex;}
-
 /* often-menu > icon - font-awesome*/
 #often-menu i{
     font-size: 45px;
-    color:rgb(129, 119, 119);
-    transition: all 1s;
+    color:gray;
+    transition: 1s all;
 }
 #often-menu i:hover{
     font-size: 45px;
     color:lightcoral;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
     -ms-transform: rotateY(180deg); /* IE 9 */
     -webkit-transform: rotateY(180deg); /* Safari */
     transform: rotateY(180deg); /* Standard syntax */
