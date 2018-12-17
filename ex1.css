@@ -16,7 +16,7 @@ a{transition: all .3s linear;-moz-transition: all .3s linear;-webkit-transition:
     z-index: 999;
     font-weight: bold;
 }
-#container {
+.container {
     margin: 0px auto;
 }
 #page-content{
@@ -369,7 +369,7 @@ p {
     100%{opacity:1;}
 }
 @media ( min-width: 481px ) {
-    #container {
+    .container {
         width: 1100px;
     }
     .section {
