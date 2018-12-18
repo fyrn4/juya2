@@ -4,7 +4,18 @@ body{margin:0;font-family: "Nanum Gothic", sans-serif;}
 h1, h2, h3, h4 {margin: 0;padding: 0;}
 ul, li {list-style: none;padding:0 0;}
 a{transition: all .3s linear;-moz-transition: all .3s linear;-webkit-transition: all .3s linear; text-decoration: none;}
-
+p {
+    font-size:14px;
+    margin:0;
+    word-break:normal;
+    word-wrap:break-word;
+  }
+table{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
 /* 헤더 ~ 네비게이션 레이아웃 */
 #header {
     margin-bottom: 20px;
@@ -153,7 +164,7 @@ a{transition: all .3s linear;-moz-transition: all .3s linear;-webkit-transition:
 }
 .section h2{
     position: relative;
-    padding: 22px;
+    padding: 30px;
 }
 .section h2::after{
     content:"";
@@ -164,15 +175,10 @@ a{transition: all .3s linear;-moz-transition: all .3s linear;-webkit-transition:
     bottom: 10;
     height: 2.5;
 }
-p {
-  margin:0;
-  word-break:normal;
-  word-wrap:break-word;
-}
 
 .p-content{
     white-space: pre-line;
-    padding:80px;
+    padding:0px 80px;
 }
 /* layer carousel */
 #layer-carousel{
@@ -436,7 +442,7 @@ p {
     } */
     .p-content{
         white-space: pre-line;
-        padding:0 30;
+        padding:0px 30px;
     }
     .row{
         display: block;
@@ -612,4 +618,58 @@ input{
 }
 .siteMap a{
     color:#2d3545;
+}
+.sub-title{
+    color:seagreen;
+    font-size: 17px;
+    padding:22px;
+}
+/* 시설소개 */
+.explain{
+    font-size: 12px;
+    color: gray;
+}
+
+/* 명단 테이블 */
+.table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0.3em 0 0.5em 0;
+    border-top: 2px solid #a5d72d;
+    color: #555;
+
+}
+.table thead{
+    background: #f4f4f4;
+}
+.table thead tr{
+    height: 40px;
+}
+.table tbody tr{
+    height: 30px;
+}
+.table th, .table td{
+    border: 1px solid gray;
+}
+/* 일정,식단,Q&A,공지사항 테이블 */
+.board-table{
+    width: 100%;
+    text-align: center;
+    margin: 0.3em 0 0.5em 0;
+    border-collapse: collapse;
+    border-top: 2px solid #a5d72d;
+    border-bottom: 2px solid #a5d72d;
+    color: #555;
+}
+.board-table thead th{
+    height: 40px;
+    border-bottom: double gray;
+}
+.board-table tbody td{
+    height: 30px;
+    border-bottom:1px solid lightgray;
+}
+.tas{
+    text-align: start;
 }
