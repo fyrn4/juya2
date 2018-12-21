@@ -9,12 +9,21 @@ p {
     margin:0;
     word-break:normal;
     word-wrap:break-word;
+    /* white-space: pre-line; */
   }
+input{
+    margin: 0px;
+    padding: 0px;
+    height: 29;
+}
 table{
     display: table;
     border-collapse: separate;
     border-spacing: 2px;
     border-color: grey;
+}
+.img100{
+    width: 100%;
 }
 /* 헤더 ~ 네비게이션 레이아웃 */
 #header {
@@ -34,6 +43,12 @@ table{
     margin-top: 101; 
     min-height: 800px;   
 }
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
 /* col-1~12*/
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
 .col-7,.col-8,.col-9,.col-10,.col-11, .col-12 {display: flex;}
@@ -50,6 +65,7 @@ table{
 .col-2{width:16.666%;}
 .col-1{width:8.333%;}
 .row{width:100%; display: flex;}
+.pull-right{float: right;}
 
 #footer {
     clear: both;
@@ -161,6 +177,7 @@ table{
 .section {
   box-shadow: 0 0 20px 0 rgba(21,47,95,.1);
   width:100%;
+  min-height: 500px;
 }
 .section h2{
     position: relative;
@@ -175,9 +192,7 @@ table{
     bottom: 10;
     height: 2.5;
 }
-
-.p-content{
-    white-space: pre-line;
+.content{
     padding:0px 80px;
 }
 /* layer carousel */
@@ -366,6 +381,7 @@ table{
 #photo-slide{
     margin: 40 0;
 }
+
 @keyframes slide{
     0%{opacity:1; left:0;}
     33.33%{opacity:0.5; left:-120%;}
@@ -378,6 +394,20 @@ table{
         width: 1100px;
     }
     .section {
+        float: left;
+        min-height: 500px;
+    }
+    .section-side-layout{
+        width:230px;
+        float: left;
+    }
+    .section-content-layout{
+        width: 860px;
+        float: right;
+        border-left: 1px solid #eaeaea;
+        padding-bottom: 30px;
+    }
+    .sub-section{
         float: left;
     }
 }
@@ -394,11 +424,9 @@ table{
         position: absolute;
         transition: all 0.5s;
         font-size: 1rem;
-        /*-webkit-transition: width 2s;*/
-        /*animation: 2s slide-out ease-in ;*/
     }
     .nav-btn{
-        display: inline-block;
+        display: block;
         float: right;
         font-size: 25;
         margin-right: 25;
@@ -409,40 +437,19 @@ table{
     }
     .item-container.nav-active {
         width: 150px;
-        /*animation: 2s slide-in ease-in ;*/
-        /*animation-fill-mode: both;*/
     }
-    
-    /*@keyframes slide-out {*/
-        /*from{*/
-            /*width:150px;*/
-        /*}*/
-        /*to{*/
-            /*width: 0px;*/
-        /*}*/
-    /*}*/
-
-    /*@keyframes slide-in {*/
-        /*from{*/
-            /*width:0px;*/
-        /*}*/
-        /*to{*/
-            /*width: 150px;*/
-        /*}*/
-    /*}*/
-    /* #header {
-        margin-bottom:20px;
-        position: fixed;
-        left:0;
-        right:0;
-        margin:0px auto;
-        width:auto;
-        height:60px;
-        margin-top:-120px;
-    } */
     .p-content{
         white-space: pre-line;
         padding:0px 30px;
+    }
+    .content{
+        padding:9px;
+    }
+    .table{
+        font-size: 10px;
+    }
+    .board-table{
+        font-size: 10px;
     }
     .row{
         display: block;
@@ -548,17 +555,21 @@ table{
     .siteMap{
         display: none;
     }
+    .section-content-layout{
+        width: 100%;
+    }
+    .photo-wrap{
+        height:180px !important; 
+        width: 35% !important;
+    }
 }
-input{
+.mb-login input{
         height: auto;  /* 높이값 초기화 */
         line-height : normal;  /* line-height 초기화 */
         padding: .7em .1em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
         border: 2px solid #999;
         border-radius: 25px;  /* iSO 둥근모서리 제거 */
         outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
-        /* -webkit-appearance: none;  
-        -moz-appearance: none;
-        appearance: none; */
 }
 .mb-menu {
     display: none;
@@ -622,7 +633,7 @@ input{
 .sub-title{
     color:seagreen;
     font-size: 17px;
-    padding:22px;
+    padding:0px 15px;
 }
 /* 시설소개 */
 .explain{
@@ -672,4 +683,147 @@ input{
 }
 .tas{
     text-align: start;
+}
+.table-footer{
+    display: inline;
+}
+.search{
+    border:0px;
+}
+.fa-search:before{
+    color:green;
+    font-size: 13px;
+    padding: 0px 11px;
+}
+.border{
+    border:1px solid #00aaff;
+}
+
+/* 포토갤러리 */
+.photo-wrap-grid{
+    display:inline-block;
+}
+.photo-wrap{
+    width: 300px;
+    height: 280px;
+    border: 1px solid cornflowerblue;
+    float: left;
+    padding: 12px;
+    margin: 12px 12px;
+}
+.photo-wrap-title{  
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin:10px 0px;
+}
+.photo-wrap-date{
+    font-size: 12px;
+    color:gray;
+    float: right;
+    position: relative;
+    top:15px;
+}
+
+.paging-ul {
+	text-align:center;
+}
+.paging-ul li {
+	display:inline;
+	vertical-align:middle;
+}
+.paging-ul li a {
+	display:-moz-inline-stack;	/*FF2*/
+	display:inline-block;
+	vertical-align:top;
+	padding:4px;
+	margin-right:3px;
+	width:15px;
+	color:#000;
+	font:bold 12px tahoma;
+	border:1px solid #eee;
+	text-align:center;
+}
+.paging-ul li a.now {
+	color:#fff;
+	background-color:#f40;
+	border:1px solid #f40;
+}
+.paging-ul li a:hover, .paging-ul li a:focus {
+	color:#fff;
+	border:1px solid #f40;
+	background-color:#f40;
+}
+.paging-pre{
+	width:25px !important;
+}
+.paging-aft{
+	width:25px !important;
+}
+.now-page{
+    float: right;
+    font-size: 11px;
+    color:gray;
+
+}
+.board-view-head{
+    border-bottom: 1px double #00aaff;
+    background: lightsteelblue;
+    padding: 8px;
+}
+.board-view-no{
+    display:inline;
+    font-size: 16px;
+    font-weight: bold;
+    color: grey;
+}
+.board-view-title{
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+}
+.board-view-date{
+    float: right;
+    font-size:13px;
+    font-weight: bold;
+    color: #3c475d;
+}
+.board-content{
+    padding: 20px 0px;
+    background: #2d3545;
+}
+
+/* 게시판 댓글 */
+.comment-form{
+    display: flex;
+    
+}
+.user-id{
+    text-align: center;
+    width: 15%;
+    font-weight: bold;
+}
+.user-comment{
+    width:70%;
+}
+.comment-textarea{
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.comment-submit{
+    width: 15%;
+}
+.comment-table td{
+    height: 30px;
+    border-bottom:1px solid lightgray;
+}
+.comment-table{
+    width: 100%;
+    text-align: center;
+    margin: 0.3em 0 0.5em 0;
+    border-collapse: collapse;
+    border-top: 1px solid palevioletred;
+    border-bottom: 1px solid palevioletred;
+    color: #555;
 }

@@ -4,14 +4,14 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>금빛-일정표 안내</title>
+        <title>금빛주야</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../ex1.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
                 crossorigin="anonymous">
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
-
+ 
 <body>
         <div id="header">
                 <nav class="nav">
@@ -120,20 +120,24 @@
                                 <img src="../banner/배너3.PNG">
                         </div>
                         <div class="siteMap-tap">
-                                <div class="siteMap-title">프로그램</div>&nbsp;
+                                <div class="siteMap-title">페이지 글쓰기</div>&nbsp;
                                 <i class="fas fa-caret-right"></i>
                                 <div class="siteMap-menu">
-                                        <a href="#">프로그램 안내</a>
-                                        <a href="#" class="siteMap-menu-active">일정표</a>
-                                        <a href="#">식단표</a>
-                                </div>
-                                <div class="siteMap">
-                                        <a href="#"><i class="fas fa-home"></i></a> <i class="fas fa-angle-right"></i>
-                                        <a href="#">프로그램</a> <i class="fas fa-angle-right"></i>
+                                        <a href="#" class="siteMap-menu-active">입소자명단</a>
                                         <a href="#">일정표</a>
+                                        <a href="#">식단표</a>
+                                        <a href="#">공지사항</a>
+                                        <a href="#">소식지</a>
+                                        <a href="#">포토갤러리</a>
                                 </div>
                         </div>  
-                        
+                        <div class="siteMap-tap">
+                                <div class="siteMap-title">가입 맴버</div>&nbsp;
+                                <i class="fas fa-caret-right"></i>
+                                <div class="siteMap-menu">
+                                        <a href="#">홈페이지 가입명단</a>
+                                </div>
+                        </div>  
                 </div>
                 <div class="container">
                         <div id="section1" class="section">
@@ -144,6 +148,60 @@
                                         </div>
                                         <div class="section-content-layout"> 
                                                 <div class="content">
+                                                        <div class="board-view-head">
+                                                                <div class="board-view-no">#11</div>
+                                                                <div class="board-view-title">제목</div>
+                                                                <div class="board-view-date">
+                                                                        <i class="far fa-clock" style="padding:3px; font-size:11px; "></i>2018.01.01 15:50 &nbsp;
+                                                                        <i class="far fa-eye" style="padding:3px; font-size:11px; "></i>0
+                                                                </div>
+                                                                
+                                                        </div>
+                                                        <div class="board-view-body">
+                                                                <div class="board-content">
+                                                                        글내용입니다.
+                                                                        <P>
+                                                                                ddddddddddddddddddddddddddddd
+                                                                                zz
+                                                                        </P>
+                                                                        djhfkalsdhfkadf
+                                                                        alskdjfl;adfjadfadlfj;aldsfjk
+                                                                        alsdkfjal;sdfj
+                                                                        <img src="12월소식지.jpg">
+                                                                </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="board-view-footer">
+                                                                <div class="comment-form">
+                                                                        <div class="user-id">
+                                                                                아이디
+                                                                        </div>
+                                                                        <div class="user-comment">
+                                                                                <textarea class="comment-textarea" placeholder="댓글입력" rows="3" aria-hidden="true"></textarea>
+                                                                        </div>
+                                                                        <button class="comment-submit">등록</button>
+                                                                </div>
+                                                                <hr>
+                                                                <i class="far fa-comment"> 댓글 2</i>
+                                                                <table class="comment-table">
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                        <td width="25%">글쓴이</td>
+                                                                                        <td width="45%" class="tas">내용</td>
+                                                                                        <td width="20%">2012.01.01</td>
+                                                                                        <td width="10%">x</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                        <td width="25%">글쓴이</td>
+                                                                                        <td width="45%" class="tas">ㅁ나어미ㅏㄴ어ㅣㅁ나어 미ㅏ어미어ㅣㅁ너 임 ㅓㅏㅣㅁ너아ㅣ머ㅏ이ㅓ 마ㅣㄴ어ㅏ민 ㅓㅏㅣㅇ내용가나다라 1234587 ㄴ아ㅣㅓㄹ 니ㅏㅇ러ㅣㅁ나얼 미아러미ㅏ넝ㄹ ㅣㅏ먼ㅇ리ㅏㅓ</td>
+                                                                                        <td width="20%">2012.01.01</td>
+                                                                                        <td width="10%">x</td>
+                                                                                </tr>
+                                                                        </tbody>
+                                                                </table>
+                                                        </div>
+                                                        <hr>
+                                                        <!-- 테이블 -->
                                                         <table class="board-table">
                                                                 <thead>
                                                                         <tr>
@@ -184,7 +242,7 @@
                                                                 <button>검색</button>
                                                         </div>
                                                         <div class="pull-right">
-                                                                <button onclick="window.open('../관리자페이지/관리자-글쓰기폼.html','_blank','width=810 height=780')">글쓰기</button>
+                                                                <button>글쓰기</button>
                                                         </div>
                                                         
                                                         <div><button>1</button><button>2</button><button>3</button></div>
